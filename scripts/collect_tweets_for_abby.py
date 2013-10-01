@@ -13,10 +13,10 @@ __status__ = "Development"
 
 from TwitterAPI import TwitterAPI
 
-api = TwitterAPI('DZ83RS3IgoBN7HfOAS6zGA',
-	'a2dCaqyup1UyNpph6lBPib0Ftykj8KR23OgMvtWtV78',
-	'18067482-cTJCT0uQ6HIWtm8f9YMHW0RcIEUxlvVkwfF8BlZTm',
-	'lm2EbhMapWF8LVcjmhUURL2PTyLeZ5DpO3ACZgno')
+api = TwitterAPI('iXNPqanEbga0DYJEROqFQ',
+	'fE4r6oYq6vVeoZjMuIDBIzfC7Xr829QAuWxxqhrs',
+	'26060205-jinL28r0G0i08ESJM5yXkb78jAptJxflSFYQDojSr',
+	'uhiYYTNw3mQJDhj5OwB0xe7Owchy9P57sJ45MnEw')
 
 PRINTING_TAGS = '3D,3Dprint,3Dprinting,3dprinter,xyzprinting,3Dfabrication,3Dscan,3Dscanning,3Dscanner,3Dmodeling'
 GOOGLE_GLASS_TAGS = 'Googleglass,googleglasses,GoogleGlassInfo,GoogleGlassNYC,GoogleGlassFans'
