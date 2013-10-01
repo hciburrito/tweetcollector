@@ -18,8 +18,11 @@ api = TwitterAPI('DZ83RS3IgoBN7HfOAS6zGA',
 	'18067482-cTJCT0uQ6HIWtm8f9YMHW0RcIEUxlvVkwfF8BlZTm',
 	'lm2EbhMapWF8LVcjmhUURL2PTyLeZ5DpO3ACZgno')
 
-# REPLACE COORDINATES FOR BOULDER
-r = api.request('statuses/filter', {'locations':'-74,40,-73,41'})
+# chautaqua
+# (40.00000497268461, -105.29022216796875)
+# pleasant view
+# (40.0507451947963, -105.24481773376465)
+r = api.request('statuses/filter', {'locations':'-105.29,40.00,-105.24,40.05'})
 
 try:
 	for item in r.get_iterator():
