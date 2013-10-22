@@ -12,6 +12,7 @@ __email__ = "antgonza@gmail.com"
 __status__ = "Development"
 
 from TwitterAPI import TwitterAPI
+from time import sleep
 
 api = TwitterAPI('DZ83RS3IgoBN7HfOAS6zGA',
 	'a2dCaqyup1UyNpph6lBPib0Ftykj8KR23OgMvtWtV78',
@@ -24,14 +25,13 @@ api = TwitterAPI('DZ83RS3IgoBN7HfOAS6zGA',
 # (40.0507451947963, -105.24481773376465)
 r = api.request('statuses/filter', {'locations':'-105.29,40.00,-105.24,40.05'})
 
-try:
-	for item in r.get_iterator():
-		fd = open('yoshiki_twitt_collection.txt', 'a')
-		fd.write(str(item)+'\n')
-		fd.close()
+while True:
+	try:
+		for item in r.get_iterator():
+			fd = open('yoshiki_twitt_collection.txt', 'a')
+			fd.write(str(item)+'\n')
+			fd.close()
 
-		# print item
-
-except ValueError:
-	print 'There was a problem collecting the data try a different search'
-	exit(1)
+	except:
+		print 'There was a problem collecting the data try a different search'
+	sleep(600)

@@ -12,6 +12,7 @@ __email__ = "antgonza@gmail.com"
 __status__ = "Development"
 
 from TwitterAPI import TwitterAPI
+from time import sleep
 
 api = TwitterAPI('iXNPqanEbga0DYJEROqFQ',
 	'fE4r6oYq6vVeoZjMuIDBIzfC7Xr829QAuWxxqhrs',
@@ -25,12 +26,13 @@ ABBY_SEARCH_TAGS = ','.join([GOOGLE_GLASS_TAGS, ARDUINO_TAGS, PRINTING_TAGS])
 
 r = api.request('statuses/filter', {'track':ABBY_SEARCH_TAGS})
 
-try:
-	for item in r.get_iterator():
-		fd = open('abby_tweet_collection.txt', 'a')
-		fd.write(str(item)+'\n')
-		fd.close()
+while True:
+	try:
+		for item in r.get_iterator():
+			fd = open('abby_tweet_collection.txt', 'a')
+			fd.write(str(item)+'\n')
+			fd.close()
 
-except ValueError:
-	print 'There was a problem collecting the data try a different search'
-	exit(1)
+	except:
+		print 'There was a problem collecting the data try a different search'
+	sleep(1200)
