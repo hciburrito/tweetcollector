@@ -18,7 +18,7 @@ api = TwitterAPI('iXNPqanEbga0DYJEROqFQ',
 	'26060205-jinL28r0G0i08ESJM5yXkb78jAptJxflSFYQDojSr',
 	'uhiYYTNw3mQJDhj5OwB0xe7Owchy9P57sJ45MnEw')
 
-PRINTING_TAGS = '3D,3Dprint,3Dprinting,3dprinter,xyzprinting,3Dfabrication,3Dscan,3Dscanning,3Dscanner,3Dmodeling'
+PRINTING_TAGS = '3Dprint,3Dprinting,3dprinter,xyzprinting,3Dfabrication,3Dscan,3Dscanning,3Dscanner,3Dmodeling'
 GOOGLE_GLASS_TAGS = 'Googleglass,googleglasses,GoogleGlassInfo,GoogleGlassNYC,GoogleGlassFans'
 ARDUINO_TAGS = 'Arduino'
 ABBY_SEARCH_TAGS = ','.join([GOOGLE_GLASS_TAGS, ARDUINO_TAGS, PRINTING_TAGS])
